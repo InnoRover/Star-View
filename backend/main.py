@@ -27,7 +27,7 @@ def create_contact():
     except Exception as e:
         return jsonify({"message":str(e)}), 400
 
-    return jsonify({"message": "User created!"}),200
+    return jsonify({"message": "User created!"}),201
 
 @app.route("/update_contact/<int:user_id>", methods=["PATCH"])
 def update_contact(user_id):
@@ -63,17 +63,3 @@ if __name__ == "__main__":
 
     app.run(debug=True)
 
-
-#create
-# - First name
-# - last name
-# - email
-#localhost:5000/create_contact
-
-#Request 
-#Type: POST
-#json: 
-
-#response
-#status: 404
-#json
